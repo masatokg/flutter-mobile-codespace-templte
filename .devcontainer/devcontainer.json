@@ -11,5 +11,8 @@
     "dart-code.dart-code"
   ],
   "remoteUser": "vscode",
-  "postCreateCommand": "flutter doctor --android-licenses"
+  "postStartCommand": "git config --global --add safe.directory /home/vscode/flutter",
+  "postCreateCommand": "flutter doctor --android-licenses && git config --global --add safe.directory /home/vscode/flutter"
+  // .devcontainer/devcontainer.json の末尾付近
+
 }

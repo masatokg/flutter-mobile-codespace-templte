@@ -25,17 +25,27 @@ RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools \
 RUN yes | sdkmanager --licenses
 RUN sdkmanager "platform-tools" "platforms;android-33" "build-tools;34.0.0"
 
-ENV FLUTTER_HOME=/opt/flutter
-ENV PATH="${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:${PATH}"
+# ENV FLUTTER_HOME=/opt/flutter
+# ENV PATH="${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:${PATH}"
+# Flutter SDK をホームディレクトリに配置するように変更
+ENV FLUTTER_HOME=/home/vscode/flutter
+ENV PATH="$FLUTTER_HOME/bin:$PATH"
 
+# vscode ユーザーでインストール
+# USER vscode
+USER root
 RUN git clone https://github.com/flutter/flutter.git ${FLUTTER_HOME} \
-    && flutter doctor
+    && chown -R vscode:vscode /home/vscode/flutter 
 
+USER vscode
 RUN flutter upgrade \
     && flutter config --enable-web \
     && flutter config --android-sdk ${ANDROID_SDK_ROOT} \
     && flutter precache
+    
+RUN git config --global --add safe.directory /home/vscode/flutter \
+    && /home/vscode/flutter/bin/flutter    
 
-RUN groupadd --gid 1000 vscode && useradd -m -u 1000 -g vscode vscode
-USER vscode
+#RUN groupadd --gid 1000 vscode && useradd -m -u 1000 -g vscode vscode
+#USER vscode
 WORKDIR /workspaces
