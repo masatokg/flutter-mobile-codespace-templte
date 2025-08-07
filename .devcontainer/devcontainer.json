@@ -1,0 +1,15 @@
+{
+  "name": "Flutter Firebase DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "dart-code.flutter",
+    "dart-code.dart-code"
+  ],
+  "remoteUser": "vscode",
+  "postCreateCommand": "flutter doctor --android-licenses"
+}
