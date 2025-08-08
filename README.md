@@ -9,8 +9,8 @@ It is designed to work seamlessly with GitHub Codespaces.<br>
 
 - Open this repository in GitHub Codespaces.
 - Codespaces will build the Dev Container automatically.
-- Run the following commands inside the container terminal:
-<br>
+- Run the following commands inside the container terminal:<br><br>
+
 - このリポジトリを GitHub コードスペースで開きます。
 - コードスペースは開発コンテナを自動的に構築します。
 - コンテナターミナル内で次のコマンドを実行します。
