@@ -20,7 +20,7 @@ flutter pub get # 依存関係にあるパッケージをインストール
 firebase login # firebaseプロジェクトにアクセス
 firebase init # firebaseプロジェクトにアクセス
 flutter run -d chrome  # for web testing
-flutter build apk      # to build Android APK
+flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0  # webサーバー実行（8080ポート）flutter build apk      # to build Android APK
 ```
 
 ## Notes
