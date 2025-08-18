@@ -3,6 +3,12 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {},
+    "ghcr.io/devcontainers/features/browser-tools:1": {
+      "browsers": "chrome"
+    }
+  },
   "customizations": {
     "vscode": {
       "settings": {
@@ -21,6 +27,4 @@
   "postStartCommand": "git config --global --add safe.directory /home/vscode/flutter",
   "postCreateCommand": "flutter doctor --android-licenses && git config --global --add safe.directory /home/vscode/flutter"
   // .devcontainer/devcontainer.json の末尾付近
-
-
 }
