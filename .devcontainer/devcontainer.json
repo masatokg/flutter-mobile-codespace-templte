@@ -4,9 +4,12 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {},
-    "ghcr.io/devcontainers/features/chromium:1": {},
-    "ghcr.io/devcontainers/features/firefox:1": {}
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "installChrome": true,
+      "installFirefox": true
+    }
+    // "ghcr.io/devcontainers/features/chromium:1": {},
+    // "ghcr.io/devcontainers/features/firefox:1": {}
   },
   "customizations": {
     "vscode": {
@@ -24,6 +27,6 @@
   },
   "remoteUser": "vscode",
   "postStartCommand": "git config --global --add safe.directory /home/vscode/flutter",
-  "postCreateCommand": "flutter doctor --android-licenses && git config --global --add safe.directory /home/vscode/flutter"
+  "postCreateCommand": "flutter doctor --android-licenses && git config --global --add safe.directory /home/vscode/flutter && flutter pub get"
   // .devcontainer/devcontainer.json の末尾付近
 }

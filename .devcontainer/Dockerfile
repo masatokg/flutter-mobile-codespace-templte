@@ -46,6 +46,15 @@ RUN flutter upgrade \
 RUN git config --global --add safe.directory /home/vscode/flutter \
     && /home/vscode/flutter/bin/flutter    
 
+# プロジェクトファイルをコンテナにコピー
+# COPY . /workspaces/flutter-mobile-codespace-templte
+# WORKDIR /workspaces/flutter-mobile-codespace-templte
+
+# 依存関係を解決
+# RUN flutter pub get
+
 #RUN groupadd --gid 1000 vscode && useradd -m -u 1000 -g vscode vscode
 #USER vscode
 WORKDIR /workspaces
+
+

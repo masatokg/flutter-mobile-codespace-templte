@@ -189,8 +189,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.10.0-106.0.dev",
+  "generatorVersion": "3.10.0-107.0.dev",
   "flutterRoot": "file:///home/vscode/flutter",
-  "flutterVersion": "3.33.0-1.0.pre-1453",
+  "flutterVersion": "3.33.0-1.0.pre-1457",
   "pubCache": "file:///home/vscode/.pub-cache"
 }
