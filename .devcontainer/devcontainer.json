@@ -3,16 +3,24 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "bash",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "dart-code.flutter",
+        "dart-code.dart-code",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack"
+      ]
+    }
   },
-  "extensions": [
-    "dart-code.flutter",
-    "dart-code.dart-code"
-  ],
   "remoteUser": "vscode",
   "postStartCommand": "git config --global --add safe.directory /home/vscode/flutter",
   "postCreateCommand": "flutter doctor --android-licenses && git config --global --add safe.directory /home/vscode/flutter"
   // .devcontainer/devcontainer.json の末尾付近
+
 
 }
