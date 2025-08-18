@@ -5,9 +5,8 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {},
-    "ghcr.io/devcontainers/features/browser-tools:1": {
-      "browsers": "chrome"
-    }
+    "ghcr.io/devcontainers/features/chromium:1": {},
+    "ghcr.io/devcontainers/features/firefox:1": {}
   },
   "customizations": {
     "vscode": {
