@@ -10,13 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # 以下のパッケージは、flutter と同じインデントレベルに配置
   firebase_core: ^4.0.0
   # 他のFirebaseパッケージは必要に応じて追加してください
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    flutter_lints: ^3.0.0
+  # 以下のパッケージは、flutter と同じインデントレベルに配置
+  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true
